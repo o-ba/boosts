@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Boosts</title>
+  <link rel="stylesheet" href="../lib/ui.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="row">
+      <h1>Boosts</h1>
+      <div class="spacer"></div>
+      <button id="manage" class="ghost" title="Open the manager">Manage</button>
+    </div>
+    <div id="host" class="host mono muted"></div>
+  </header>
+
+  <div id="banner" class="banner" hidden></div>
+  <p id="a11y-status" class="sr-only" role="status" aria-live="polite"></p>
+
+  <main id="main" hidden>
+    <div class="row picker">
+      <select id="select" aria-label="Boost for this site"></select>
+      <button id="new" title="New boost for this site">+</button>
+      <label class="switch" title="Enable this boost">
+        <input type="checkbox" id="enabled">
+        <span></span>
+      </label>
+    </div>
+
+    <div id="patterns" class="patterns mono muted"></div>
+
+    <div class="editor-bar">
+      <div class="tabs" role="tablist" aria-label="Boost code">
+        <button id="tab-css" role="tab" aria-selected="true" aria-controls="pane">CSS</button>
+        <button id="tab-js" role="tab" aria-selected="false" aria-controls="pane">JavaScript</button>
+      </div>
+      <div class="spacer"></div>
+      <span id="jshint" class="jshint muted" hidden>needs reload</span>
+    </div>
+
+    <div id="pane" class="pane" role="tabpanel" aria-labelledby="tab-css"></div>
+
+    <footer>
+      <span id="status" class="status muted"></span>
+      <div class="spacer"></div>
+      <button id="reload" class="ghost" title="Reload the page">Reload</button>
+    </footer>
+  </main>
+
+  <div id="blocked" class="blocked muted" hidden></div>
+
+  <script src="../lib/patterns.js"></script>
+  <script src="../lib/store.js"></script>
+  <script src="../lib/highlight.js"></script>
+  <script src="../lib/codearea.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

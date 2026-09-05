@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Boosts",
+  "version": "1.0.0",
+  "description": "Per-site CSS and JavaScript. Write a snippet once, pick the sites it belongs to.",
+  "homepage_url": "https://github.com/o-ba/boosts",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "storage",
+    "userScripts",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Boosts",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "options_page": "manager/manager.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*",
+        "file://*/*"
+      ],
+      "js": [
+        "lib/patterns.js",
+        "content/injector.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+B",
+        "mac": "Alt+Shift+B"
+      }
+    }
+  }
+}

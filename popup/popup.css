@@ -1,0 +1,83 @@
+/*
+ * Boosts - per-site CSS and JavaScript for Chromium browsers.
+ * Copyright (C) 2026 Oliver Bartsch
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 as published
+ * by the Free Software Foundation. This program is distributed WITHOUT ANY
+ * WARRANTY; see the LICENSE file for details.
+ */
+
+body {
+  width: 420px;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 10px 12px 8px;
+  border-bottom: 1px solid var(--border);
+  flex: none;
+}
+header h1 { font-size: 14px; }
+.host {
+  margin-top: 2px;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.banner { margin: 10px 12px 0; flex: none; }
+.banner .notice { font-size: 12px; }
+.banner button { margin-top: 7px; }
+
+main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px 0;
+  gap: 8px;
+}
+
+.picker { flex: none; }
+.picker select { flex: 1; min-width: 0; }
+.picker button#new { flex: none; width: 30px; padding: 5px 0; font-size: 15px; line-height: 1; }
+
+.tabs { flex: none; align-items: center; }
+.jshint { font-size: 11px; padding-right: 4px; }
+
+.pane { flex: 1; min-height: 0; display: flex; }
+.pane .codearea { flex: 1; }
+
+footer {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 0 10px;
+}
+.status { font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.status:not(:empty)::before { content: "⌁ "; }
+.status.ok { color: var(--ok); }
+.status.error { color: var(--danger); }
+
+.blocked { padding: 24px 16px; text-align: center; line-height: 1.5; }
+
+.patterns {
+  flex: none;
+  font-size: 11px;
+  margin-top: -4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tabs sit in their own tablist; the reload hint lives beside it, not inside it. */
+.editor-bar { display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--border); }
+.editor-bar .tabs { border-bottom: none; }
+
+/* Patterns wrap instead of being cut off with an ellipsis and no way to read them. */
+.patterns { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.45; }

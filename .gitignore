@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# JetBrains
+.idea/
+
+# Editors
+.vscode/
+*.swp
+
+# Superseded icon artwork, kept locally but not published
+icons/_mascot/
+icons/_old-placeholder/

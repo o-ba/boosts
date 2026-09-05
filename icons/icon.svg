@@ -1,0 +1,11 @@
+<!-- Boosts toolbar icon: braces framing a bolt.
+     One drawing, rendered to icon-16/32/48/128.png. The braces sit at 55%
+     white so the bolt reads first. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="28" fill="#5b5bd6"/>
+  <g fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+    <path d="M42 26 C32 26 32 42 32 51 C32 59 22 64 22 64 C22 64 32 69 32 77 C32 86 32 102 42 102"/>
+    <path d="M86 26 C96 26 96 42 96 51 C96 59 106 64 106 64 C106 64 96 69 96 77 C96 86 96 102 86 102"/>
+  </g>
+  <path d="M72 24 L46 68 H60 L56 104 L82 60 H68 Z" fill="#fff"/>
+</svg>

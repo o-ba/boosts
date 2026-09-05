@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Boosts</title>
+  <link rel="stylesheet" href="../lib/ui.css">
+  <link rel="stylesheet" href="manager.css">
+</head>
+<body>
+  <header class="topbar">
+    <img src="../icons/icon-32.png" alt="" width="20" height="20">
+    <h1>Boosts</h1>
+    <span class="muted">custom CSS and JavaScript per site</span>
+    <div class="spacer"></div>
+    <label class="pause" title="Stop every boost without disabling them individually">
+      <input type="checkbox" id="paused">
+      <span>Pause all</span>
+    </label>
+    <button id="import">Import…</button>
+    <button id="export">Export</button>
+    <input type="file" id="file" accept="application/json,.json" hidden>
+  </header>
+
+  <div id="paused-banner" class="setup" hidden>
+    <div class="notice warn">
+      <strong>All boosts are paused.</strong>
+      Nothing is being injected on any site. Untick “Pause all” to switch them back on.
+    </div>
+  </div>
+  <div id="setup" class="setup" hidden></div>
+  <p id="a11y-status" class="sr-only" role="status" aria-live="polite"></p>
+
+  <div class="layout">
+    <aside>
+      <div class="side-head">
+        <input type="text" id="search" placeholder="Filter boosts" aria-label="Filter boosts">
+        <button id="new" class="primary" title="New boost">New</button>
+      </div>
+      <ul id="list" class="list"></ul>
+      <p id="empty" class="empty muted" hidden>No boosts yet. Create one, or open the popup on a site.</p>
+    </aside>
+
+    <section id="detail" class="detail" hidden>
+      <div class="row detail-head">
+        <input type="text" id="name" aria-label="Boost name" placeholder="Boost name">
+        <label class="switch" title="Enabled">
+          <input type="checkbox" id="enabled">
+          <span></span>
+        </label>
+        <button id="duplicate" class="ghost">Duplicate</button>
+        <button id="delete" class="danger">Delete</button>
+      </div>
+
+      <div id="error" class="notice error" hidden></div>
+
+      <label class="field">
+        <span>Sites (one pattern per line)</span>
+        <textarea id="patterns" rows="3" class="mono"
+          placeholder="github.com&#10;*.example.com/docs*&#10;https://news.ycombinator.com/*"></textarea>
+      </label>
+      <p id="normalized" class="normalized mono muted"></p>
+
+      <div class="options">
+        <label class="field">
+          <span>Run JS at</span>
+          <select id="runAt">
+            <option value="document_start">document_start</option>
+            <option value="document_end">document_end</option>
+            <option value="document_idle">document_idle</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>JS context</span>
+          <select id="world">
+            <option value="MAIN">Page (can touch page globals)</option>
+            <option value="USER_SCRIPT">Isolated</option>
+          </select>
+        </label>
+        <label class="field checkbox">
+          <span>Frames</span>
+          <label><input type="checkbox" id="allFrames"> Also run in iframes</label>
+        </label>
+      </div>
+
+      <div class="editor-bar">
+        <div class="tabs" role="tablist" aria-label="Boost code">
+          <button id="tab-css" role="tab" aria-selected="true" aria-controls="pane">CSS</button>
+          <button id="tab-js" role="tab" aria-selected="false" aria-controls="pane">JavaScript</button>
+        </div>
+        <div class="spacer"></div>
+        <span id="status" class="status muted"></span>
+        <button id="save" class="primary">Save</button>
+      </div>
+
+      <div id="pane" class="pane" role="tabpanel" aria-labelledby="tab-css"></div>
+    </section>
+
+    <section id="placeholder" class="placeholder muted">
+      <p>Select a boost on the left, or create a new one.</p>
+    </section>
+  </div>
+
+  <dialog id="import-dialog" class="import-dialog">
+    <form method="dialog">
+      <h2>Import boosts</h2>
+      <p class="muted" id="import-summary"></p>
+      <ul id="import-list" class="import-list"></ul>
+      <div class="notice warn" id="import-warning" hidden></div>
+      <p class="muted small">Everything is imported switched off. Review each one, then
+        enable the ones you want.</p>
+      <div class="dialog-actions">
+        <button value="cancel" class="ghost">Cancel</button>
+        <button value="import" id="import-confirm" class="primary">Import, disabled</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="../lib/patterns.js"></script>
+  <script src="../lib/store.js"></script>
+  <script src="../lib/highlight.js"></script>
+  <script src="../lib/codearea.js"></script>
+  <script src="manager.js"></script>
+</body>
+</html>

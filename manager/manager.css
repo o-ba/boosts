@@ -1,0 +1,169 @@
+/*
+ * Boosts - per-site CSS and JavaScript for Chromium browsers.
+ * Copyright (C) 2026 Oliver Bartsch
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 as published
+ * by the Free Software Foundation. This program is distributed WITHOUT ANY
+ * WARRANTY; see the LICENSE file for details.
+ */
+
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  flex: none;
+}
+.topbar h1 { font-size: 15px; }
+.topbar .muted { font-size: 12px; }
+
+.setup { padding: 12px 14px 0; flex: none; }
+.setup .notice { font-size: 12.5px; }
+.setup ol { margin: 7px 0 0; padding-left: 20px; }
+.setup li { margin: 3px 0; }
+.setup .actions { margin-top: 9px; display: flex; gap: 8px; }
+
+.layout { flex: 1; min-height: 0; display: flex; }
+
+aside {
+  width: 270px;
+  flex: none;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.side-head { display: flex; gap: 6px; padding: 10px; flex: none; }
+.side-head input { flex: 1; min-width: 0; }
+.side-head button { flex: none; }
+
+.list { list-style: none; margin: 0; padding: 0 6px 10px; overflow-y: auto; flex: 1; }
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.list li:hover { background: var(--bg-sunken); }
+/*
+ * Selection used to be a background wash alone, at 1.15:1 against the page - not
+ * visible, and the rows were not focusable so there was no focus ring either.
+ * A solid accent rail carries the state at full contrast.
+ */
+.list li[aria-current="true"] {
+  background: var(--accent-soft);
+  box-shadow: inset 3px 0 0 var(--accent);
+  font-weight: 600;
+}
+.list li:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.list .info { flex: 1; min-width: 0; }
+.list .title { font-weight: 550; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.list .sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--mono);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list li.off .title { color: var(--text-muted); font-weight: 500; }
+.list li.off .sub { color: var(--text-muted); }
+.list .flags { font-size: 10px; color: var(--text-muted); letter-spacing: 0.06em; flex: none; }
+.list .order { display: flex; flex-direction: column; gap: 1px; flex: none; opacity: 0; }
+.list li:hover .order, .list li:focus-within .order, .list li[aria-current="true"] .order { opacity: 1; }
+.list .order button {
+  padding: 0;
+  width: 18px; height: 13px;
+  line-height: 11px;
+  font-size: 9px;
+  border-radius: 3px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.list .order button:hover:not(:disabled) { background: var(--bg-sunken); color: var(--text); }
+.list .order button:disabled { opacity: 0.35; cursor: default; }
+.empty { padding: 0 14px; line-height: 1.5; }
+
+.detail, .placeholder {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+}
+.placeholder { align-items: center; justify-content: center; }
+
+.detail-head { flex: none; margin-bottom: 10px; }
+.detail-head input { flex: 1; font-weight: 600; }
+
+.detail .field { flex: none; }
+.normalized { flex: none; margin: -6px 0 10px; font-size: 11px; line-height: 1.5; }
+
+.options { display: flex; gap: 12px; flex: none; }
+.options .field { flex: 1; }
+.options .checkbox label { display: flex; align-items: center; gap: 6px; padding-top: 7px; font-weight: 400; }
+.options .checkbox input { width: auto; }
+
+.detail .tabs { flex: none; align-items: center; padding-bottom: 4px; }
+.detail .tabs .status { font-size: 11px; margin-right: 8px; }
+.detail .tabs .status.ok { color: var(--ok); }
+.detail .tabs .status.error { color: var(--danger); }
+.detail .tabs button.primary { border-radius: 6px; padding: 5px 13px; margin-left: 0; }
+
+.pane { flex: 1; min-height: 160px; display: flex; margin-top: 10px; }
+.pane .codearea { flex: 1; }
+
+#error { flex: none; margin-bottom: 10px; font-size: 12.5px; }
+
+/* Editor toolbar: the tablist holds only tabs, with Save alongside it. */
+.editor-bar { display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--border); flex: none; }
+.editor-bar .tabs { border-bottom: none; }
+.editor-bar .status { font-size: 11px; }
+
+/* Import review */
+.import-dialog {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  color: var(--text);
+  padding: 0;
+  max-width: 460px;
+  width: calc(100vw - 32px);
+}
+.import-dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
+.import-dialog form { padding: 16px 18px 14px; display: flex; flex-direction: column; gap: 10px; }
+.import-dialog h2 { margin: 0; font-size: 15px; }
+.import-dialog .small { font-size: 11px; }
+.import-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+.import-list li {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 9px;
+  font-size: 12px;
+}
+.import-list .name { font-weight: 600; }
+.import-list .meta { color: var(--text-muted); font-family: var(--mono); font-size: 11px; margin-top: 2px; }
+.import-list .risk { color: var(--warn); font-weight: 600; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 2px; }
+
+/* Global pause lives in the top bar, next to the things it overrides. */
+.pause { display: flex; align-items: center; gap: 6px; font-size: 12px; cursor: pointer; }
+.pause input { accent-color: var(--warn); width: 14px; height: 14px; }

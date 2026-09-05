@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boosts</title>
+<meta name="description" content="Every site has one thing you'd change. Change it once, and keep it. Per-site CSS and JavaScript for any Chromium browser. No account, no cloud, no build step.">
+<meta property="og:title" content="Boosts">
+<meta property="og:description" content="Every site has one thing you'd change. Change it once, and keep it. Per-site CSS and JavaScript for any Chromium browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://boosts.krawo.li/">
+<meta property="og:image" content="https://boosts.krawo.li/manager-dark.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#131318;
+    --paper-raised:#1c1c25;
+    --ink:#eceaf2;
+    --ink-soft:#9b98a8;
+    --bolt:#7c7cf0;
+    --bolt-deep:#a5a5f8;
+    --mint:#4ee0b0;
+    --amber:#f5b455;
+    --line:rgba(236,234,242,0.09);
+    --shadow:rgba(0,0,0,0.6);
+    --font-display:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+    --font-body:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+  a{color:var(--bolt-deep);}
+
+  h1,h2,h3{font-family:var(--font-display);letter-spacing:-.02em;margin:0;text-wrap:balance;}
+  h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02;font-weight:800;}
+  h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;font-weight:700;}
+  h3{font-size:1.12rem;font-weight:700;}
+  .pop{color:var(--bolt-deep);}
+  p{margin:0;}
+  .lede{color:var(--ink-soft);font-size:clamp(1.02rem,2vw,1.2rem);max-width:56ch;}
+
+  /* ---------------------------------------------------------------- header */
+  .topbar{display:flex;align-items:center;gap:12px;padding:26px 0;}
+  .topbar img{display:block;border-radius:9px;}
+  .topbar .name{font-family:var(--font-display);font-weight:800;font-size:1.15rem;letter-spacing:-.01em;}
+  .topbar .spacer{flex:1;}
+  .topbar a{color:var(--ink-soft);text-decoration:none;font-weight:600;font-size:.92rem;}
+  .topbar a:hover{color:var(--ink);}
+
+  /* ------------------------------------------------------------------ hero */
+  .hero{
+    padding:64px 0 40px;overflow:hidden;
+    background:radial-gradient(circle at 82% 8%, color-mix(in srgb, var(--bolt) 24%, transparent), transparent 60%);
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;
+  }
+  .hero-icon{
+    width:96px;height:96px;border-radius:20px;
+    margin:0 0 20px;
+    box-shadow:0 16px 30px -12px var(--shadow);
+  }
+  .hero .lede{margin-top:22px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:32px;}
+  .hero-fine{
+    margin-top:16px;font-family:var(--font-mono);font-size:.78rem;color:var(--ink-soft);
+    letter-spacing:.02em;
+  }
+  .hero-visual{position:relative;display:flex;justify-content:center;}
+  .popup-frame{
+    position:relative;z-index:2;
+    width:min(320px, 86%);
+    border-radius:22px;
+    padding:8px;
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    box-shadow:0 30px 60px -20px var(--shadow);
+  }
+  .popup-frame img{display:block;width:100%;height:auto;border-radius:15px;}
+  .toolbar-chip{
+    position:absolute;top:-14px;right:6px;z-index:3;
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--paper-raised);border:1px solid var(--line);
+    border-radius:999px;padding:7px 14px;
+    font-family:var(--font-mono);font-size:.74rem;color:var(--ink-soft);
+    box-shadow:0 12px 24px -12px var(--shadow);
+  }
+  .toolbar-chip .dot{
+    width:16px;height:16px;border-radius:5px;background:var(--bolt);
+    display:grid;place-items:center;color:#0d0d14;font-size:.6rem;font-weight:700;
+  }
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+  .btn svg{width:18px;height:18px;}
+  @media (max-width:920px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{margin-top:28px;}
+    .topbar a:not(:last-child){display:none;}
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--font-body);font-weight:700;font-size:.98rem;
+    padding:14px 24px;border-radius:14px;text-decoration:none;
+    border:1px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--bolt);color:#0d0d14;box-shadow:0 14px 30px -14px var(--bolt);}
+  .btn-ghost{border-color:var(--line);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--bolt);}
+  .meta{margin-top:18px;color:var(--ink-soft);font-family:var(--font-mono);font-size:.8rem;}
+
+  /* --------------------------------------------------------------- section */
+  section{padding:72px 0;}
+  section.tight{padding:48px 0;}
+  .head{max-width:60ch;margin-bottom:36px;}
+  .head h2{margin-bottom:14px;}
+
+  .grid{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:680px){.grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr);}}
+
+  .card{
+    background:var(--paper-raised);border:1px solid var(--line);
+    border-radius:20px;padding:28px;
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .card p{color:var(--ink-soft);font-size:.95rem;}
+  .card .mark{
+    width:36px;height:36px;border-radius:11px;
+    display:grid;place-items:center;
+    background:color-mix(in srgb, var(--bolt) 18%, transparent);
+    color:var(--bolt-deep);font-family:var(--font-mono);font-weight:600;font-size:.9rem;
+  }
+
+  /* ------------------------------------------------------------ screenshot */
+  .shot{
+    background:var(--paper-raised);border:1px solid var(--line);border-radius:22px;
+    padding:20px;box-shadow:0 24px 48px -24px var(--shadow);
+  }
+  .shot img{display:block;width:100%;height:auto;border-radius:12px;}
+  .shot figcaption{margin-top:16px;color:var(--ink-soft);font-size:.9rem;}
+  .shots{display:grid;gap:22px;grid-template-columns:1fr;margin:0;}
+  @media(min-width:900px){.shots.two{grid-template-columns:1fr 1fr;}}
+
+  /* ---------------------------------------------------------------- syntax */
+  .snippet{
+    background:var(--paper-raised);border:1px solid var(--line);border-radius:18px;
+    padding:22px 24px;font-family:var(--font-mono);font-size:.86rem;line-height:1.75;
+    overflow-x:auto;white-space:pre;margin:0;color:var(--ink);
+  }
+  .snippet .c{color:#7d8590;font-style:italic;}
+  .snippet .s{color:#e5c07b;}
+  .snippet .p{color:#56b6c2;}
+  .snippet .v{color:#d19a66;}
+  .snippet .k{color:#c678dd;}
+  .snippet .u{color:var(--ink-soft);}
+
+  /* --------------------------------------------------------------- privacy */
+  .claims{display:flex;flex-direction:column;gap:14px;margin:28px 0 0;padding:0;list-style:none;}
+  .claims li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;color:var(--ink-soft);}
+  .claims .tick{color:var(--mint);font-weight:700;}
+  .claims b{color:var(--ink);font-weight:700;}
+
+  /* ------------------------------------------------------------------- cta */
+  .cta{
+    border:1px solid var(--line);border-radius:24px;padding:44px 32px;text-align:center;
+    background:radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--bolt) 20%, transparent), transparent 65%);
+  }
+  .cta .actions{justify-content:center;}
+
+  footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--ink-soft);font-size:.9rem;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .foot-left{display:flex;align-items:center;gap:10px;color:var(--ink-soft);font-size:.9rem;}
+  .foot-left img{display:block;border-radius:7px;}
+  .foot-links{display:flex;gap:22px;font-size:.88rem;font-weight:600;flex-wrap:wrap;}
+  .chip{
+    font-family:var(--font-mono);font-size:.72rem;background:color-mix(in srgb, var(--ink) 8%, transparent);
+    padding:3px 9px;border-radius:99px;color:var(--ink-soft);
+  }
+  footer a{color:var(--ink-soft);text-decoration:none;}
+  footer a:hover{color:var(--ink);}
+
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <img src="data:image/png;base64,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" width="30" height="30" alt="">
+    <span class="name">Boosts</span>
+    <span class="spacer"></span>
+    <a href="#features">Features</a>
+    <a href="#look">Screens</a>
+    <a href="#privacy">Privacy</a>
+    <a href="https://github.com/o-ba/boosts">GitHub</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <img class="hero-icon" src="data:image/png;base64,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" alt="Boosts extension icon">
+      <h1>Make every site<br><span class="pop">behave.</span></h1>
+      <p class="lede">
+        You notice the same annoyances every day and fix them never. Fixing them means opening
+        DevTools, and DevTools forgets the moment you reload.
+        <strong>Boosts remembers.</strong> A snippet of CSS or JavaScript, pointed at the sites
+        it belongs to, applied every time you visit them.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://github.com/o-ba/boosts">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.53 9.53 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.57.69.48A10 10 0 0 0 12 2Z"/></svg>
+          Get it on GitHub
+        </a>
+        <a class="btn btn-ghost" href="#look">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          See it working
+        </a>
+      </div>
+      <div class="hero-fine">FREE &amp; OPEN SOURCE &middot; NO BUILD STEP &middot; NO DEPENDENCIES &middot; NO NETWORK</div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="popup-frame">
+        <div class="toolbar-chip"><span class="dot">1</span> boosts on this page</div>
+        <img src="popup.png" alt="The Boosts popup open on a Wikipedia article, editing the CSS that applies to it">
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="head">
+      <h2>You keep making the same fix.<br>Make it stick.</h2>
+      <p class="lede">
+        A docs page with a column too narrow to read. A sidebar you have never once looked at.
+        A header that follows you down the page. A font two sizes too small on the one dashboard
+        you stare at all day. Fix each one once, and stop thinking about it.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="mark">{ }</div>
+        <h3>CSS and JavaScript</h3>
+        <p>Both, per boost, with a real editor: line numbers, auto-indent, bracket completion and
+          syntax highlighting for each language.</p>
+      </div>
+      <div class="card">
+        <div class="mark">&#9889;</div>
+        <h3>CSS applies live</h3>
+        <p>Save, and every open tab updates with no reload. The popup previews your changes as you
+          type them.</p>
+      </div>
+      <div class="card">
+        <div class="mark">&#8594;</div>
+        <h3>Patterns that forgive</h3>
+        <p>Type <code>github.com</code>, get every subdomain. Type <code>localhost:3000</code> and
+          the port is dropped for you, because match patterns already cover every port.</p>
+      </div>
+      <div class="card">
+        <div class="mark">&#8635;</div>
+        <h3>Everything autosaves</h3>
+        <p>A popup is dismissed by clicking away, with no chance to press a button. So there is no
+          button: edits are written as you make them.</p>
+      </div>
+      <div class="card">
+        <div class="mark">&#8597;</div>
+        <h3>Order you control</h3>
+        <p>Two boosts on one site are resolved by their order in the list, and the list is
+          something you can actually rearrange.</p>
+      </div>
+      <div class="card">
+        <div class="mark">&#10073;&#10073;</div>
+        <h3>One switch to stop</h3>
+        <p>Pause every boost at once. Broke the web with a stray <code>*</code>? The manager is an
+          extension page, so it always still opens.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="look" class="tight">
+  <div class="wrap">
+    <div class="head">
+      <h2>What it actually looks like</h2>
+      <p class="lede">No mockups. These are screenshots of the extension running.</p>
+    </div>
+
+    <figure class="shot">
+      <img src="manager-dark.png" alt="The Boosts manager, editing a CSS boost for Wikipedia" loading="lazy">
+      <figcaption>The manager: every boost, its sites, when the JavaScript runs, and the editor.</figcaption>
+    </figure>
+
+    <div class="shots two" style="margin-top:22px;">
+      <figure class="shot">
+        <img src="manager-light.png" alt="The Boosts manager in its light theme" loading="lazy">
+        <figcaption>Light theme, and it follows your system.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="import-review.png" alt="The import dialog warning that a boost wants to run JavaScript on every site" loading="lazy">
+        <figcaption>Import shows you what a file wants before it writes anything, and lands it disabled.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="head">
+      <h2>A boost is just a snippet<br>and a site.</h2>
+    </div>
+    <pre class="snippet">
+<span class="u">Sites</span>  <span class="s">wikipedia.org</span>  <span class="c">&rarr; *://*.wikipedia.org/*</span>
+
+<span class="c">/* Widen the article column and soften the type. */</span>
+<span class="s">.mw-parser-output</span> {
+  <span class="p">max-width</span>: <span class="v">46rem</span>;
+  <span class="p">line-height</span>: <span class="v">1.7</span>;
+}
+
+<span class="k">@media</span> (<span class="p">min-width</span>: <span class="v">1200px</span>) {
+  <span class="s">#content</span> { <span class="p">margin-left</span>: <span class="v">12rem</span>; }
+}
+    </pre>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap">
+    <div class="head">
+      <h2>Nothing leaves your browser.</h2>
+      <p class="lede">
+        Boosts needs access to the sites you use, because a per-site injector cannot know in
+        advance which ones you will want. Here is exactly what it does with that.
+      </p>
+    </div>
+    <ul class="claims">
+      <li><span class="tick">&#10003;</span><span><b>No network calls of any kind.</b> Not for sync, not for telemetry, not for updates. <code>grep</code> the repository for <code>fetch</code> and you will find nothing outside the tests.</span></li>
+      <li><span class="tick">&#10003;</span><span><b>No account, no server.</b> Everything lives in your browser's own local storage and is readable in DevTools whenever you want to look.</span></li>
+      <li><span class="tick">&#10003;</span><span><b>No build step, no dependencies, no minification.</b> About 3,000 lines of plain JavaScript you can read in an afternoon.</span></li>
+      <li><span class="tick">&#10003;</span><span><b>Imports arrive switched off.</b> A file someone else wrote is shown to you in full (which sites, and whether it runs JavaScript) before anything is stored.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Give the web some manners.</h2>
+      <p class="lede" style="margin:14px auto 0;">
+        Load it unpacked in about thirty seconds. It is not on the Chrome Web Store, and it
+        does not need to be.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/o-ba/boosts">Get it on GitHub</a>
+        <a class="btn btn-ghost" href="https://github.com/o-ba/boosts#install">Install guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-left">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAANmElEQVR4AeydT4wcRxXGq9dmJSeRkGVjS+AbCmIC5kZkOABScom4tWIl7DhXuHAEJCNxQooluHKBY+JdEjnaG8olkYADscKNJruIiBMGyUssC8mxpcV2837T2+vZ2e7pV9VV1T0zPZra/vfq1Xvf+97r6vLMeM0EeG1s7HxrY+OjH43HO29I+2A8/uifsr0vLR/ajgYDwWqCmWC38wZYgmmAUBlvBLhyZfd74/HujfF4536SmD8kSfJLMfg1aZeMSS4YY05JG946BASrCWaCnXkNLBPBFGzHgjFY69Q0S7UiwKuv/u3zYtDr4/HOJ3mebxmTvyxDivHyd3iHQECwzV8GazAfj3dfJwZtBnIiwOXLfzrF4CdOPP6XBP2qGHBG2vCOi4Bgnl8lBsSCmLgMb00Ays/6+mf/fhB4lzGHPt4RyK8SE2Jjq9qKADIZ+TXlxxT3dDO8+oRAcoHYECMbq1QEeOWV7Ivj8c4HSZJ830b5IBsfAWJErIiZZvRGAozHf/36yZNrvxdlzEhlM7wXAIFLxIzY1dlanl8rd6q2hYK1d81Q8s3ivXiMXHu3iGG99bUEKEpIsi1dZbYpf4f3IiIgsUu2i1hWm19LgJMnT1w3Q+abxX8lF4pYVntSSYCDmeRwz6/GbBHPXjqI6THbjxGAZ0lmksckhxMLjQAxJbazThwhAKtJef74F7NCw/FyIEBsifG0N0cIsL5++mdmuO+b5X0lF4oYP/HwkADFPyrkrOs/uTrsLR0CLOEXsS5cOyTAiRP5D4tTw99lR2A61ocEEGYMy7zLHvlD//LDWE8IcDA7lEWDQ4lhZ7kROHMQ8+ITQXlu0uX2d/BuFoEy5pMKIOX/u7MCw/GyI5BPYr528GHDU31z9/z5dUN78cXThraxcd5cvPj05Jzp6avK3h7bfIrYSwXIn+8LniWABPuFF04b2rlz64aGjRcvPjM5hxzHfWoEusre0mZ8QqZftufPr8kS4df6ACTglAA22YNcv4A0Up2eaTJ7IoPt+Noo7FmgSh2xlwpgnq26GPMcgJApNmPSx0beRTZNP6fqZmsLvtr2URliL/SsECDnM/v2XT31AAgA8aTOq5rR6CmVPpdqhM/4rhogmFB+QQiQdPb8DwAAEcy/Foq12d9iiMktwYU8bcY82jc5IwTo7hs7bYJ/+/b+UV88H6XpWbO7e9+z1uPqmBN0SIJTEOC4VRHOkP1thsmyT9t0n9s3Vd77SyVtbWmLRWmHy7ZDAjTPmuscyrJ7dZdanyf4qWS/jSKq0fvv37XpckSWx9yuqkAnBHBh/N7evqEBdBYw+6cnfru7+ipTkiALSM4jrPF00AkBbNgOoFtbt817792dNID25PsxNamU/mkCHBNoOIFtmZATe2mZBRlckqLBnMnlpj+dEICS12QY1wEwE0DZj9HSmdLfdhKI7ZmSBGBikxi+8IhOABumZ1GDr1v0sQU+pg+2tiEfnQBalmfKzMGJti2V0p96zv5pm5i7TB/X7dskR50O2/PRCUCpszVy0eWziJXMFqvoBNAaGAu0tCL7sbHt/R8dZWNyWO7P23aRHFEJoC3/80DyfS2dKf2+9Zf6tLeB2BhFJcC5c58p8Zi71YI1V4niYirZrxBbapGoBNAiqS2ZWn1Vcjzvp3Oy32YRqEr/7DmtT9okmdU/e6w97iUBtMa3kRuNnm7TPVjfpb4FaJ3b2/tfMIBRnErpT+dkPzI+J4HoC+0TY7i0lawATcF3AXJR+6wcAVLJ/qZg+c7+pvG6vB6VANrnXO2EyQW4tKH0u+jU9NH6pMVIM6ZGJioBNAaFlEkV2c/4QwUAhSVrBD/tKPv7DOXKVIBVCb4t2VaCAKmy9Jfg+V4EKvX2cbsiBDjbR+x7YdPSE8A2+4nKMAkEhSVoBD9dwImfdsXUR4iiVQDtp1329vx94WOk/GrXNJAhs9+nb9M2t9mPRgCtkdoFkyZ9qUz8XAjQpLfNda1v2mRpY0vZNwoBcKjN18BKY222qWPpD1sBdP/IxWpgrNtAcALgiE3wfXwULJXstyFLH2VtvzPo6kNQAhB8HHE1zqUfwU8ds99lPJs+2ltAqRPswLA8DrENRgAMxwEbo7OIHwWvsyv0IpCtj2DILbTO3rbngxAAgzHc1ris5cenUyn9aU+zv8QCH22fBriFgmmpw+fWKwHIen7RC4Ntjcw8ZL+P4IecBJaYZA5EB1N+aAqMSz0+tt4IAEPJemawtoZlEvzMAZTpcVLJ/ulj1/3r10fGttmOzVzAtgqU/oAxWJfHbbdeCIBBMNTFGIBoG3ye99O0u/X+7e3/WLvOt53x3bqjdABrX5XACwHEJqc3AACEU+epTqMOP+G7vf3JlCV2u/gOBna9CmmSrthr99cLAWCkixkA4NJvuk8qpT9dsOyftr9t9ZvW5bLvhQCuLPZRxroNvnv2l8FiPlDu22xd5lpV+r0QoEqx5lzbMpZK9mvGCSFD6Xe598/awlPT7DnNcSYTZ41ck4wXAmSOM3hY7AoAjqUdln4fC0b4Dgb40lXzQgDKWObISAAACFsA0o6zv+16AdUP3239Rh6sM8eko/9080IAFGIQv+DFvm0DCNv5AOX3ypVdY9tsbauSZ+yq89pzBN9l4sxcC4zBWjtWk5w3AjAQlcD217HoRwMUtiHbyOEDIrP2cO+fPWd77BL8TCosT01gbDvePHmvBCgHyqQ8ZWJweazZUgVikEBjS50MwfeR/XX66877zvrpcYIQgAEyIQGGs69tLpmh1Y3cqMMFI8an2foIhlVZjy4fLRgBMA7DcYB9bbOdC2j1tpXzkf22NoAdGNr2s5EPSgAMwQEcYX+RW9vSj+82t7hMbqFgR7+QLTgBMB5HmMGy39RC/kTKyHESSPY32e3zOsHP5BbqU2edrigEYHCtQ327BfC87yP7waBvvmFTNAIwmKbxNKCRc5FxqQAQwGWsqj5a37TJUjWG7bloBOA2YGtc1/KUfl/Z37UvdeNHI0CdAbHOu2T/sgcf7FeGADhr08h+G/lYsr7HWRkCjCwXgVYh+yHTyhAAZ7VtVbIfPAYCgMJUI/irkv24vTIEGCkXgVYp+NEJoF0N7GrBhOwHlBBN65MWI182DhVgCslVy35cXxkC4Oy8FjL7543b9bVeEsD3Pwg13f8Jfujs1/pUt2IaiihRCRDbOS1oPj7hqx2rb3JRCbCn/H8AtBMmLZijOYtAZL/Pf/Cps8m3T3Xj2J6PSgBb42LIhy79pQ/afwnUJkmpt+02KgG0twAtWG2dJ/vb6vDdX4uRr3GjEgCj95S/A+izZI4qFoEIfqzst/koGBjFbNEJoHWuz6BpfbCV0yaHrd558tEJoP20i8/bwGwFiJn9gK/9KHjs8o9t0QnAoNoWqgrEKv34aeNDVXKgI2SLTgBYri11ZI4NgFVAVWV/lVyIc9iODxrdWkw0umxkohMA42yYDoD8OhYNQNtMDnneD5n92MY3nWmFvc/grqqRGCpBz0KdEMDVB8jAr2QBtFbHaGoRCAJo+9nKQU5sY+5Cs+1vkxS2uufJd0IA2N6m5AG0DQkAIPTED3IyjkvLsnsu3bz06YQAWJ61/OYLGYcebQtZ+m1tmbW5LRaz+myOIcADmw6+ZKkCMb4zOJJFILLfl91Vemyr0bSOrMPsFzseCAHyO7LTyRsSxAAgZPa3AQ7fs5aVsM34xuR3hADJrXZK2vUGgMwhCyCPZuSQEz/N+HUy+JzNCX5dP7/nk1tCAPOxX6X22gAisyRBpgQvRvZrbSmRycTXTGl/2SfQ9uO1PM//Eki5lVoAYU6QCThNHTUyTTp8XqcaYXuTTp58kMv6EXxD7KUCJB82GR7rOkACDj80VQB1z2QHhAA8WnH+01gmqcfB9sK24pEOW2mco+FTiB95UhtYKZh8uLa19dwf5VonTwIybu0bQDPJFFoJXv8APGp+afOsvZw/KtmLowfEXioAxiS/4+/QVgmBIuYTAiSJ2V4l1wdfjSljPiHA9euj3xpjOlsPkLGHd1wE7hzE3EwIUIyd/KbYDn+7RCDO2E9ifUiAR4+SX8UZfBilawSmY31IgLfe+vK/jUmumeG15Agk14pYF24eEoDD/f27P5f14U6XhrFjaKEQyG8VMX6i/wgBbtz45oMkWfvJk8vD3jIhQGyJ8bRPRwjABWaHskQ4TAgBY4kaMSW2sy4dIwACW1tf+YFsb0ob3suBwM2DmB7zppIASD18+OjKMB8AiUVv+a0iltV+1BLg7bcv/kMIkEq3YYFIQAj9DqRfYpenRSyrR6glAOKbm1/9szGPXzImH54MAGShGjF7/FIRw3rD5xKAbih4+PDxd2R/mBMICAvyvknMiF2TvY0EQAElZHPzuW8wk+R4aP1FgBgRK2KmsVJFgFIRM8kkSTaGW0KJSJ+2+S1iQ4xsrLIiAIp5ltzf/++XzLBsbPrzSq4RE2Jja5M1ARiA1aTNzdFPHz1a+4IpiCCzTTO84iIgmCfXiAGxICYuwzsRoByIf1RgcLnnnKX8GJO8Y4zp3cfLxKZleQu2yTtgDeZgTwzaONeKANMDU37EoMti2FN5br4tk5Efy/U3pcnTQ85jpBgvR8P7CAI1B4LVBDPBzrwJlmAKtmAM1jX9rE//HwAA//8lB3fVAAAABklEQVQDAI1Mlua+oxv9AAAAAElFTkSuQmCC" width="22" height="22" alt="">
+      Boosts, made with &#10084;&#65039; by Krawoli
+      <span class="chip">v1.0.0</span>
+    </div>
+    <div class="foot-links">
+      <a href="https://github.com/o-ba/boosts">GitHub</a>
+      <a href="https://github.com/o-ba/boosts/releases">Releases</a>
+      <a href="https://github.com/o-ba/boosts/blob/main/LICENSE">GPL-2.0 License</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

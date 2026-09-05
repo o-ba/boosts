@@ -1,0 +1,15 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  jsc:
+    # The suite runs against JavaScriptCore, which ships with macOS.
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run test suites
+        run: sh tests/run.sh
