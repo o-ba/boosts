@@ -11,3 +11,8 @@
 # Superseded icon artwork, kept locally but not published
 icons/_mascot/
 icons/_old-placeholder/
+
+# Chrome Web Store build output
+store/*.zip
+store/*.png
+store/*.md
